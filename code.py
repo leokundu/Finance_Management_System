@@ -1542,7 +1542,7 @@ HTML_CONTENT = r"""<!DOCTYPE html>
             setTimeout(() => { toast.classList.add('toast-hide'); setTimeout(() => toast.remove(), 250); }, 3000);
         }
         
-        async function apiCall(method, endpoint, data = null) {
+        async async function apiCall(method, endpoint, data = null) {
             const headers = { 'Content-Type': 'application/json' };
             if (token) headers['Authorization'] = `Bearer ${token}`;
             
@@ -1628,7 +1628,7 @@ HTML_CONTENT = r"""<!DOCTYPE html>
             icon.className = showing ? 'fas fa-eye' : 'fas fa-eye-slash';
         }
 
-        async function login() {
+        async async function login() {
             const username = document.getElementById('loginUsername').value;
             const password = document.getElementById('loginPassword').value;
             
