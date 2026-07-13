@@ -1523,7 +1523,7 @@ HTML_CONTENT = r"""<!DOCTYPE html>
         // GLOBAL STATE
 
         // ============================================================================
-        const API = 'http://localhost:8000/api';
+        const API = '/api';
         let token = localStorage.getItem('token');
         let currentUser = null;
         let currentPage = 'dashboard';
@@ -1542,7 +1542,7 @@ HTML_CONTENT = r"""<!DOCTYPE html>
             setTimeout(() => { toast.classList.add('toast-hide'); setTimeout(() => toast.remove(), 250); }, 3000);
         }
         
-        async async function apiCall(method, endpoint, data = null) {
+        async async async function apiCall(method, endpoint, data = null) {
             const headers = { 'Content-Type': 'application/json' };
             if (token) headers['Authorization'] = `Bearer ${token}`;
             
@@ -1628,7 +1628,7 @@ HTML_CONTENT = r"""<!DOCTYPE html>
             icon.className = showing ? 'fas fa-eye' : 'fas fa-eye-slash';
         }
 
-        async async function login() {
+        async async async function login() {
             const username = document.getElementById('loginUsername').value;
             const password = document.getElementById('loginPassword').value;
             
